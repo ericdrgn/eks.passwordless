@@ -10,13 +10,13 @@
     </style>
   </head>
   <body>
-    <h2>Passwordless API with Node.js</h2>
-    <p>To run this example you must first add yor API key in index.html and your API Secret in app.js</p>
-    <p><a href="https://docs.passwordless.dev/guide/getting-started.html#introduction">Documentation</a> - <a href="https://beta.passwordless.dev/create-account">Get your API keys</a></p>
+    <h2>[bio] b.a.d. </h2>
+    <p>register or sign in with your id below</p>
+    <p><a href="https://status.drgn.xyz">status</a> - <a href="https://drgn.im">chat</a></p>
 
-    <input type="text" id="alias" placeholder="Alias (Username, Email etc)" />
-    <button id="passwordless-register">Register</button>
-    <button id="passwordless-signin">Login</button>
+    <input type="text" id="alias" placeholder="user id" />
+    <button id="passwordless-register">register</button>
+    <button id="passwordless-signin">sign in</button>
     <pre id="status"></pre>
 
     <script
@@ -36,7 +36,7 @@
           "[" + new Date().toLocaleTimeString() + "]: " + text + "\n";
         status.innerText = newLine + currentText;
       }
-      Status("Welcome! Please register or sign in");
+      Status("Authenticate with your biometrics after enter your id and registering or signing in");
 
       if(API_KEY[0] === "<") {
         Status("WARNING: Please change the API_KEY in index.html and API_KEY_SECRET in app.js before running the example.")
@@ -48,7 +48,7 @@
 
         const alias = document.getElementById("alias").value;
 
-        Status("Starting registering...");
+        Status("registration authorized...");
 
         /**
          * Initiate the Passwordless client with your public api key
@@ -76,7 +76,7 @@
         try {
           await p.register(backendResponse);
 
-          Status("Successfully registered WebAuthn. You can now sign in!");
+          Status("successfully registered, you can now sign in");
 
           /**
            * Done - the user can now sign in using the key
@@ -128,7 +128,7 @@
            * Done - you can now check the user result for status, userid etc
            */
           Status("User details: " + JSON.stringify(user,null,2));
-          Status("Yey! Succesfully signed in without a password!");
+          Status("magic");
 
           console.log("User", user);
         } catch (e) {
