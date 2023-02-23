@@ -5,8 +5,8 @@ require('dotenv').config();
 const port = process.env.PORT || 3000;
 
 const apiurl = process.env.API_URL || "https://v3.passwordless.dev";
-const API_SECRET = process.env.API_SECRET || "YOUR_API_SECRET"; // Replace with your API secret
-const API_KEY = process.env.API_KEY || "YOUR_API_KEY"; // this will be injected to index.html
+const API_SECRET = process.env.API_SECRET || "xbad:secret:f0655689c6cc49bfb2c291bf4e1786b0"; // Replace with your API secret
+const API_KEY = process.env.API_KEY || "xbad:public:489856cfc6284162b8b1c80a82ea5fcb"; // this will be injected to index.html
 
 console.log("Using API URL: " + apiurl);
 console.log("Using API key: " + API_KEY);
